@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <meta name="author" content="" />
+
+    <!-- Title  -->
+    <title>Axel Cyber Enterprises</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favi.png" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="/css/plugins3.css" />
+
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS4P951GY3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-HS4P951GY3");
+    </script>
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        p {
+            font-family: "Syne", sans-serif;
+        }
+
+        .service-item {
+            opacity: 0;
+            transition: opacity 0.5s;
+
+        }
+
+        .clients .main-marq:after {
+            content: "";
+            position: absolute;
+            top: -30px;
+            bottom: -30px;
+            left: -30px;
+            right: -30px;
+            pointer-events: none;
+        }
+
+
+        .aos-animate {
+            opacity: 1;
+        }
+
+        .slide-in-left {
+            transform: translateX(-100%);
+        }
+
+        .slide-in-right {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <!-- ==================== Start progress-scroll-button ==================== -->
+
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <!-- ==================== End progress-scroll-button ==================== -->
+
+    <!-- ==================== Start cursor ==================== -->
+
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+    <!-- ==================== End cursor ==================== -->
+
+    <!-- ==================== Start Navbar ==================== -->
+
+    <nav class="navbar navbar-expand-lg nochan" style="background-color: #000;">
+        <div class="container-xxl">
+            <a class="navbar-brand" href="https://axelcyber.com">
+                <div class="logo">
+                    <div class="logo-light">
+                        <img src="/img/logooo.png" alt="" />
+                    </div>
+                    <div class="logo-dark">
+                        <img src="/img/logo-dark.png" alt="" />
+                    </div>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class=" text-center">
+                            <a href="" class="butn butn-bg butn-md"
+                                style="background-color: #2484DC; border-radius: 10px">
+                                <span class="fw-600 fz-12 text-u ls1 text-dark">Get Started</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <div class="nav-info-right d-flex align-items-center">
+                    <div class="dark-mode-icon">
+                        <button type="button" class="theme-icon">
+                            <i aria-hidden="true" class="pe-7s-moon moon"
+                                title="Toggle between dark and light mode"></i>
+                            <i aria-hidden="true" class="pe-7s-sun sun" title="Toggle between dark and light mode"></i>
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== End Navbar ==================== -->
+
+    <main>
+
+        <!-- Facebook login for building apps on whatsapp-->
+        <!-- Might eventually just move this to its own page-->
+        <div style="padding: 100px; text-align: center;">
+              <button onclick="launchWhatsAppSignup()"
+                style="background-color: #1877f2; border: 0; border-radius: 4px; color: #fff; cursor: pointer; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; height: 40px; padding: 0 24px;">
+                Login with Facebook
+              </button>
+        </div>
+    </main>
+
+    <script>
+        // Facebook Login with JavaScript SDK
+        function launchWhatsAppSignup() {
+          // Launch Facebook login
+          FB.login(function (response) {
+            if (response.authResponse) {
+              const accessToken = response.authResponse.accessToken;
+              //Use this token to call the debug_token API and get the shared WABA's ID
+            } else {
+              console.log('User cancelled login or did not fully authorize.');
+            }
+          }, {
+            config_id: '<CONFIG_ID>', // configuration ID obtained in the previous step goes here
+            response_type: 'code',     // must be set to 'code' for System User access token
+            override_default_response_type: true,
+            extras: {
+              setup: { // Prefilled data can go here
+              }
+            }
+          });
+        }
+      </script>
+
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '1529668694601376',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v20.0'
+          });
+        };
+      </script>
+      <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js">
+      </script>
+
+    <!-- ==================== End Footer ==================== -->
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery-migrate-3.4.0.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 800, // Animation duration
+                easing: 'ease-in-out', // Easing for animation
+                mirror: false, // Whether elements should animate out while scrolling past them
+                offset: 100, // Offset (in px) from the original trigger point
+                once: true // Whether animation should happen only once - while scrolling down
+            });
+        });
+    </script>
+    <!-- plugins -->
+    <script src="/js/plugins.js"></script>
+
+    <!-- custom scripts -->
+    <script src="/js/scripts.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/three.min.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/hover-effect.umd.js"></script>
+    <script src="/js/hover-effect-script.js"></script>
+
+    <!-- BotPress Chatbot -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/6e4cadde-c6c1-4f1c-a011-1bb91eafe72e/webchat/config.js" defer></script>
+
+</body>
+
+</html>
