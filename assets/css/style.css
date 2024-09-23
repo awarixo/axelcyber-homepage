@@ -427,15 +427,7 @@ main .slines span {
   border-right: 1px solid #eee;
   height: 100%;
 }
-.row-eq {
-  display: flex;
-  flex-wrap: wrap;
-}
-.box-serv {
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Ensures all boxes take up the full height of the container */
-}
+
 /* ====================== [ End lines ] ====================== */
 
 /* ====================== [ Start marquee ] ====================== */
@@ -453,7 +445,7 @@ main .slines span {
   left: -30px;
   right: -30px;
   pointer-events: none;
-  /* background: -webkit-linear-gradient(
+  background: -webkit-linear-gradient(
     right,
     #1e2022,
     rgba(255, 255, 255, 0) 220px,
@@ -473,37 +465,36 @@ main .slines span {
     rgba(255, 255, 255, 0) 220px,
     rgba(255, 255, 255, 0) calc(100% - 220px),
     #1e2022
-  ); */
+  );
 }
 
 .main-marq.lrg .box .item h4 {
-  font-size: 3vw;
+  font-size: 5vw;
 }
 
 .main-marq .slide-har {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
 }
 
 .main-marq .strok .item h4 {
   color: transparent;
-  -webkit-text-stroke: 1px #2484dc;
+  -webkit-text-stroke: 1px #fff;
 }
 
 .main-marq .strok .item h4 a {
   color: transparent;
-  -webkit-text-stroke: 1px #2484dc;
+  -webkit-text-stroke: 1px #fff;
 }
 
 .main-marq .non-strok .item h4 {
-  color: #2484dc !important;
+  color: #fff !important;
   -webkit-text-stroke: 0 !important;
 }
 
 .main-marq .non-strok .item h4 a {
-  color: #2484dc !important;
+  color: #fff !important;
   -webkit-text-stroke: 0 !important;
 }
 
@@ -3328,7 +3319,6 @@ header .arrow-down {
 .clients .main-marq {
   position: relative;
   padding: 0;
-  overflow: hidden;
 }
 
 .clients .main-marq .slide-har {
@@ -3347,11 +3337,11 @@ header .arrow-down {
   position: relative;
   text-align: center;
   padding: 30px 50px;
-  /* border: 1px solid rgba(255, 255, 255, 0.08); */
+  border: 1px solid rgba(255, 255, 255, 0.08);
   margin: 0 15px;
 }
 
-/* .clients .main-marq .box .item:hover .img {
+.clients .main-marq .box .item:hover .img {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -3387,10 +3377,10 @@ header .arrow-down {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-} */
+}
 
 .clients .main-marq .box .item .img {
-  width: 200px;
+  width: 110px;
   margin: auto;
   position: relative;
   -webkit-transition: all 0.4s;
@@ -7352,7 +7342,7 @@ body.light:not(.business-home)
   .item:nth-of-type(even)
   h4,
 body.light:not(.business-home) .bg-dark .main-marq .strok .item h4 {
-  -webkit-text-stroke: 1px #2484dc !important;
+  -webkit-text-stroke: 1px #1e2022 !important;
 }
 
 body.light:not(.business-home)
@@ -7362,7 +7352,7 @@ body.light:not(.business-home)
   .item:nth-of-type(even)
   h4,
 body.light:not(.business-home) .bg-dark .main-marq .non-strok .item h4 {
-  color: #2484dc !important;
+  color: #1e2022 !important;
 }
 
 body.light:not(.business-home) .clients .brands .item {
